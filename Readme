@@ -1,0 +1,27 @@
++++++++++++++++++++++++++++++++++++++++++++++
++   svm算法模块 (算法模块入口： libsvm-3.22/ ) +
++++++++++++++++++++++++++++++++++++++++++++++
+
+算法运行入口： python/start.py
+功能模块存放路径：python/
+    1. 参数寻优模块（网格搜索）：
+        函数入口：grid.py
+        GUI结果截图：FormatDataLibsvm.txt.png
+        最佳参数输出结果：FormatDataLibsvm.txt.out
+    2. 数据处理函数接口：dataProcessing.py
+    3. 文件处理函数接口：fileProcessing.py
+    4. 预测性能评估示意图绘制函数接口：python/plotSVM.py
+运行结果存放在以下目录中： results/
+    ----------------------------------------------------------------
+        文件名                         含义
+    ----------------------------------------------------------------
+       ROC-cross validation.png    交叉验证效果图
+       ROC-linear.png              基于线性盒模型预测结果ROC曲线
+       ROC-poly.png                基于多项式盒模型预测结果ROC曲线
+       ROC-RBF.png                 基于RBF函数盒模型预测结果ROC曲线
+       ROC-sigmoid.png             基于sigmoid函数盒模型预测结果ROC曲线
+       sample classification.png   样本分类效果图
+    ----------------------------------------------------------------
+
+需要配置的参数：
+    1. N_FEATURES(python/fileProcessing.py/delIndexSymb) : 采样数据帧属性的数量
